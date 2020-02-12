@@ -1,0 +1,59 @@
+<template id="noteTemplate">
+    <div class="card hoverable item item--note" data-changed="false" data-noteid="">
+
+        <div class="item-body">
+            <label for="title-note">Title:</label>
+            <h4 id="title-note" contenteditable="true"></h4>
+            <hr>
+            <label for="text-note">Text:</label>
+            <p id="text-note" contenteditable="true"></p>
+            <hr>
+            <label class="mb-0"><small>Created at:</small></label>
+            <p id="date-created"></p>
+        </div>
+
+        <div class="item-pin">
+            <div class="item-panel">
+                <a type="button" class="btn-floating btn-sm deep-orange" data-action="delete">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="listTemplate">
+    <div class="card hoverable item item--list" data-changed="false" data-listid="">
+
+        <div class="item-body">
+            <label for="title-list">Title</label>
+            <h4 id="title-list" contenteditable="true"></h4>
+            <hr>
+            <label for="task-list">Tasks:</label>
+            <div id="task-list" class="task-list">
+            <!-- taskTemplate here -->
+            </div>
+            <div class="add-task"></div>
+            <hr>
+            <label class="mb-0"><small>Created at:</small></label>
+            <p id="date-created"></p>
+        </div>
+
+        <div class="item-pin">
+            <div class="item-panel">
+                <a type="button" class="btn-floating btn-sm deep-orange" data-action="delete">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</template>
+
+<template id="taskTemplate">
+    <div contenteditable="false" class="task-wrapper">
+        <div class="check-mark"></div>
+        <p contenteditable="true" class="pr-3"></p>
+        <div class="delete-task"></div>
+    </div>
+</template>
